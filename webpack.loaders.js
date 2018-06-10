@@ -34,7 +34,7 @@ module.exports = [
         [
           'import', {
             libraryName: 'antd',
-            style: 'css',
+            libraryDirectory: "es"
           }
         ]
       ]
@@ -149,6 +149,13 @@ module.exports = [
   // ===============================
   // Do not modularize these imports
   // (leave them as global css styles)
+  {
+    test: /\.(sass|scss)$/,
+    issuer: /\.less$/,
+    use: {
+      loader: './sassToLess.js' // Change path if necessary
+    }
+  },
   {
     test: /\.(sass|scss)$/,
     include: path.resolve(__dirname, 'styles/base'),
