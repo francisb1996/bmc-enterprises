@@ -29,7 +29,15 @@ module.exports = [
       // It enables caching results in ./node_modules/.cache/babel-loader/
       // directory for faster rebuilds.
       cacheDirectory: true,
-      plugins: ['react-hot-loader/babel'],
+      plugins: [
+        'react-hot-loader/babel',
+        [
+          'import', {
+            libraryName: 'antd',
+            style: 'css',
+          }
+        ]
+      ]
     }
   },
   // =========

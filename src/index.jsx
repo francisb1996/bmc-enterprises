@@ -7,8 +7,10 @@ import Navigation from './components/Navigation';
 const renderApp = (Component) => {
   ReactDOM.render(
     <AppContainer>
-      <Navigation/>
-      <Component/>
+      <div>
+        <Navigation/>
+        <Component/>
+      </div>
     </AppContainer>,
     document.getElementById('app')
   );
