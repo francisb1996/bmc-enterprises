@@ -9,7 +9,7 @@
     "start": "webpack-dev-server --progress --profile --colors",
     "lint": "eslint --ext js --ext jsx src || exit 0",
     "dev": " webpack-dashboard -- webpack-dev-server",
-    "test": "export NODE_ENV=test && jest"
+    "test": "set NODE_ENV=test && jest"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "theme": "./src/theme.js",
   "dependencies": {
     "babel-polyfill": "6.26.0",
+    "less": "^3.0.4",
     "normalize.css": "^7.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
@@ -49,6 +50,7 @@
     "file-loader": "^1.1.6",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.0.4",
+    "less-loader": "^4.1.0",
     "loglevel": "^1.6.0",
     "node-sass": "^4.7.2",
     "postcss-loader": "^2.0.9",

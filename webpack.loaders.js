@@ -145,10 +145,10 @@ module.exports = [
       }
     ]
   },
-  // Global SASS (from app)
-  // ===============================
-  // Do not modularize these imports
-  // (leave them as global css styles)
+  {
+    test: /\.less$/,
+    use: ['style-loader', 'css-loader', "less-loader"]
+  },
   {
     test: /\.(sass|scss)$/,
     issuer: /\.less$/,
@@ -156,6 +156,10 @@ module.exports = [
       loader: './sassToLess.js' // Change path if necessary
     }
   },
+  // Global SASS (from app)
+  // ===============================
+  // Do not modularize these imports
+  // (leave them as global css styles)
   {
     test: /\.(sass|scss)$/,
     include: path.resolve(__dirname, 'styles/base'),
